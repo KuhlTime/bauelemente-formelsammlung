@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>HSD-Glossar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma-rtl.min.css" />
+    <link href="./css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="page-home">
+      <section class="section">
+        <div class="container">
+          <h1 class="title">HSD-Glossar</h1>
+          <p class="subtitle">Dies ist mein persönliches <strong>Symbol Glossar</strong>!</p>
+          <button class="button is-primary is-rounded" id="newSymbol">Neues Formelzeichen</button>
+        </div>
+      </section>
+
+      <div class="container">
+        <table class="table" style="width: 100%">
+          <thead>
+            <tr>
+              <th>Bezeichnung</th>
+              <th>Formelzeichen</th>
+              <th>Einheit</th>
+              <th>Erklärung</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="page-new-symbol" style="display: none">
+      <section class="section">
+        <div class="container">
+          <button id="cancleBtn" class="button is-danger">Abbrechen</button>
+          <button id="saveBtn" class="button is-primary" disabled>Speichern</button>
+          <h1 class="title" style="margin-top: 24px">Neues Symbol</h1>
+          <p class="subtitle">Erstelle ein neues <strong>Symbol</strong>!</p>
+
+          <form>
+            <div class="field">
+              <label for="input-symbol" class="label">Formelzeichen (LaTeX)</label>
+              <input type="text" id="input-symbol" class="input" />
+            </div>
+            <div class="field">
+              <label for="input-symbol" class="label">Bezeichnung</label>
+              <input type="text" id="input-name" class="input" />
+            </div>
+            <div class="field">
+              <label for="input-symbol" class="label">Einheit (LaTeX)</label>
+              <input type="text" id="input-unit" class="input" />
+            </div>
+            <div class="field">
+              <label for="input-symbol" class="label">Beschreibung</label>
+              <input type="text" id="input-description" class="input" />
+            </div>
+            <div class="field">
+              <label for="input-symbol" class="label">Ist Konstante</label>
+              <input type="checkbox" id="input-isConstant" class="checkbox" />
+            </div>
+            <div class="field">
+              <label for="input-symbol" class="label">Wert</label>
+              <input type="text" id="input-value" class="input" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
