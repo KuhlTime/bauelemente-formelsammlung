@@ -2,18 +2,17 @@
   "name": "formel-glossar",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.html",
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "scripts": {
     "start": "parcel src/index.html",
     "dev": "parcel serve src/index.html",
-    "build": "parcel build src/index.html --dist-dir dist"
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "André Kuhlmann <akuhltime@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "parcel": "^2.0.0-beta.2",
     "prettier": "^2.2.1",
