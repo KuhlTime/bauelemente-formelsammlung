@@ -2,19 +2,19 @@
   "name": "formel-glossar",
   "version": "1.0.0",
   "description": "",
+  "main": "./dist/index.html",
   "engines": {
     "node": ">=14"
   },
   "scripts": {
-    "start": "parcel src/index.html",
-    "dev": "parcel serve src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html && cp ./robots.txt ./dist/robots.txt"
   },
   "keywords": [],
   "author": "André Kuhlmann <akuhltime@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "parcel": "^2.0.0-beta.2",
+    "parcel": "next",
     "prettier": "^2.2.1",
     "typescript": "^4.2.4"
   },
