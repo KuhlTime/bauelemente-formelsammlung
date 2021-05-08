@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-const pages = ['home', 'new-symbol']
+const pages = ['home', 'new-symbol', 'detail']
 
 const startingPage = pages[0]
 
