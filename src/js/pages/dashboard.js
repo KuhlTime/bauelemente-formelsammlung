@@ -42,7 +42,7 @@ function updateUI() {
       ''
     )
 
-    $tr.append($name, $symbol, $unit, $description)
+    $tr.append($name, $symbol, $unit)
     $tbody.append($tr)
   }
 }
