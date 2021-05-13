@@ -19,7 +19,7 @@ const changeHandler = () => {
       output: 'mathml'
     })
 
-    const formulas = (symbol.formulas || []).map(s => '<p>' + katex.renderToString(symbol.symbol + '=' + s, { output: 'mathml' }) + '</p>')
+    const formulas = (symbol.formulas || []).map(s => '<p style="margin-top: 12px">' + katex.renderToString(symbol.symbol + '=' + s, { output: 'mathml' }) + '</p>')
 
     $page.find('#symbol').html(symbolKatex)
     $page.find('#title').html(symbol.name)
