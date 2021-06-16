@@ -30,9 +30,9 @@ function updateUI() {
     const $unit = $(`<td>${unitKatex}</td>`)
     const $description = $(`<td>${symbol.description}</td>`)
 
-    const eventHandler = (symbol) => {
-        stateManager.setSymbol(symbol)
-        switchPage('detail')
+    const eventHandler = symbol => {
+      stateManager.setSymbol(symbol)
+      switchPage('detail')
     }
 
     $detailButton.on('click', () => eventHandler(symbol))
