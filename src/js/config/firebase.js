@@ -1,12 +1,12 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: 'AIzaSyC5WtOaKfXGZajvQ6hopnLzOG6S3vHrijI',
-  authDomain: 'formel-glossar.firebaseapp.com',
-  projectId: 'formel-glossar',
-  storageBucket: 'formel-glossar.appspot.com',
-  messagingSenderId: '808294339954',
-  appId: '1:808294339954:web:0225bda4d939771d7739eb',
-  measurementId: 'G-8GFCWJ1CRZ'
+  apiKey: 'AIzaSyDJ9Wgz1voL0sr5wOYqlnig9ncxcKqcNk4',
+  authDomain: 'formel-glossar-naco.firebaseapp.com',
+  projectId: 'formel-glossar-naco',
+  storageBucket: 'formel-glossar-naco.appspot.com',
+  messagingSenderId: '198830357038',
+  appId: '1:198830357038:web:260147055987393b9e3dbf',
+  measurementId: 'G-DEX0GZGJMK'
 }
 
 // Initialize Firebase
