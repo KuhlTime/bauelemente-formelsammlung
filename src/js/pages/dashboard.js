@@ -17,17 +17,19 @@ var symbols = []
 function updateUI() {
   $tbody.html('')
 
+  window.katex = katex
+
   for (const symbol of symbols) {
-    const symbolKatex = katex.renderToString(symbol.symbol, { output: 'mathml' })
+    const symbolKatex = katex.renderToString(symbol.symbol, { output: 'html' })
     const unitKatex = katex.renderToString(symbol.isConstant ? symbol.value + ' ' + symbol.unit : symbol.unit, {
-      output: 'mathml'
+      output: 'html'
     })
 
     const $tr = $('<tr></tr>')
     const $detailButton = $(`<a>${symbol.name}</a>`)
     const $name = $('<td style="text-align: left"></td>').append($detailButton)
-    const $symbol = $(`<td>${symbolKatex}</td>`)
-    const $unit = $(`<td>${unitKatex}</td>`)
+    const $symbol = $(`<td></td>`).append(symbolKatex)
+    const $unit = $(`<td></td>`).append(unitKatex)
     const $description = $(`<td>${symbol.description}</td>`)
 
     const eventHandler = symbol => {

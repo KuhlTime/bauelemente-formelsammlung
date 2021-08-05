@@ -14,12 +14,17 @@ const changeHandler = () => {
   const symbol = stateManager.getSymbol()
 
   if (symbol) {
-    const symbolKatex = katex.renderToString(symbol.symbol, { output: 'mathml' })
-    const unitKatex = katex.renderToString(symbol.isConstant ? symbol.value + ' ' + symbol.unit : `[${symbol.symbol}]=` + symbol.unit, {
-      output: 'mathml'
-    })
+    const symbolKatex = katex.renderToString(symbol.symbol, { output: 'html' })
+    const unitKatex = katex.renderToString(
+      symbol.isConstant ? symbol.value + ' ' + symbol.unit : `[${symbol.symbol}]=` + symbol.unit,
+      {
+        output: 'html'
+      }
+    )
 
-    const formulas = (symbol.formulas || []).map(s => '<p style="margin-top: 12px">' + katex.renderToString(symbol.symbol + '=' + s, { output: 'mathml' }) + '</p>')
+    const formulas = (symbol.formulas || []).map(
+      s => '<p style="margin-top: 12px">' + katex.renderToString(symbol.symbol + '=' + s, { output: 'html' }) + '</p>'
+    )
 
     $page.find('#symbol').html(symbolKatex)
     $page.find('#title').html(symbol.name)
