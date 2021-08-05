@@ -17,8 +17,6 @@ var symbols = []
 function updateUI() {
   $tbody.html('')
 
-  window.katex = katex
-
   for (const symbol of symbols) {
     const symbolKatex = katex.renderToString(symbol.symbol, { output: 'html' })
     const unitKatex = katex.renderToString(symbol.isConstant ? symbol.value + ' ' + symbol.unit : symbol.unit, {
