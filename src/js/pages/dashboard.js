@@ -37,10 +37,10 @@ function updateUI() {
 
     $detailButton.on('click', () => eventHandler(symbol))
 
-    const $deleteButton = $(
-      //'<td><button class="button is-danger is-rounded" style="margin: 2px 0">Löschen</button></td>'
-      ''
-    )
+    // const $deleteButton = $(
+    //   //'<td><button class="button is-danger is-rounded" style="margin: 2px 0">Löschen</button></td>'
+    //   ''
+    // )
 
     $tr.append($name, $symbol, $unit)
     $tbody.append($tr)
