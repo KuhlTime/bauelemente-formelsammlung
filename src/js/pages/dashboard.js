@@ -8,6 +8,8 @@ import stateManager from '../model/state-manager'
 const $tbody = $('tbody')
 const $newSymbolBtn = $('#newSymbol')
 
+const lastUpdate = undefined
+
 $newSymbolBtn.on('click', () => {
   switchPage('new-symbol')
 })
