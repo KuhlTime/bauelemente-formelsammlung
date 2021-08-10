@@ -46,6 +46,8 @@ function updateUI() {
 
     $tr.append($name, $symbol, $unit)
     $tbody.append($tr)
+
+    window.symbols = symbols
   }
 }
 
